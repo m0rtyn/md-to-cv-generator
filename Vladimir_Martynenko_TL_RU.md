@@ -1,5 +1,0 @@
- :[alternate-text](./templates/header-tl.md)
- :[alternate-text](./templates/info.md)
- :[alternate-text](./templates/intro-tl.md)
- :[alternate-text](./templates/experience.md)
- :[alternate-text](./templates/hobbies.md)
