@@ -1,20 +1,33 @@
 # Vladimir Martynenko
 
-### **Frontend Team lead / Engineering manager**
+## **Frontend Team lead / Engineering manager**
 
 |  |  |
 | --- | --- |
-| Experience:  6+ years | Email:  [zogacc@gmail.com](mailto:zogacc@gmail.com) |
-| Location: Armenia | Telegram:  [m0rtyn.t.me](https://m0rtyn.t.me) |
-| Languages:  Russian / English | Github:  [github.com/m0rtyn](https://github.com/m0rtyn) |
+| Experience:  **7 years** | Email:  [zogacc@gmail.com](mailto:zogacc@gmail.com) |
+| Languages:  **RUS / ENG** | Telegram:  [m0rtyn.t.me](https://m0rtyn.t.me) |
+| Location: **Armenia** | Github:  [github.com/m0rtyn](https://github.com/m0rtyn) |
 
-I use TypeScript to create web interfaces and keep an eye on code complexity. I can also build simple Python or Node.js backends.
+> 👋 Hello! My name is Vova, but many call me Martyn. Currently, I am seeking a position as a Frontend Developer.
+>
+> With experience in React, Vue, and Angular (7+ years), I have mastered universal principles of code organization. However, React holds a special place in my heart.
+>
+> I using TypeScript and keep a close eye on code complexity. Additionally, I occasionally work with Node.js and Python.
+> 
+> Processes are also significant to me: I am an advocate of agile methodologies, extreme programming, and [FFF](https://fff.works/).
 
-Processes are also significant to me: I advocate agile methodologies and extreme programming. I lead sprints, set goals, break down tasks, and formalize them.
+## Experience
 
-I would like to work as a leader or engineering manager in a team.
+### Frontend Team Lead @ HTML Academy
 
-# Experience
+*Remote, Full-time, January '23 - July '23*
+
+- Led an infrastructure team supporting more than 10 microservices.
+- Assisted in the successful release of 5 projects within six months.
+- Implemented the collection of technical performance metrics within the team (Web Vitals, Prometheus, Grafana).
+- Introduced poker planning to measure team productivity.
+- Developed bots to assist with code reviews and sprint result tracking.
+- Conducted an analysis of the technical stack in the team's projects, updated dependencies, and reduced the number of vulnerabilities by half (400 → 200).
 
 ### Frontend dev @ Vilantis.ai
 
@@ -92,49 +105,26 @@ On-site, Full-time, *Jule ‘16 — September ‘18*
 - Made markup for American golf and baseball training service (Vue)
 - Made markup for French clothes marketplace (Angular)
 
-# Personal projects
+## Personal projects
 
 I enjoy giving speeches and writing articles. As a book lover and coffee addict, I read a lot.
 
-- [Pokoy](http://about.pokoy.app): a meditation app
+- [Pokoy](https://pokoy.app): Meditation timer (Firebase, React, Redux Toolkit, PWA) — [Product Hunt](https://www.producthunt.com/products/pokoy)
     
-    Techstack: Firebase, React, Canvas & SVG, Progressive Web App
+    <!-- - Создал минималистичное приложение на основе исследований [«временного дисконтирования» (скорости обратной связи)](https://www.frontiersin.org/articles/10.3389/fpsyg.2017.01007/full#B37) и [«последовательных приближений» (маленьких цели)](https://en.wikipedia.org/wiki/Shaping_(psychology)).
+    - Запустил на Product Hunt: 102 голоса "вверх", 7-й продукт дня -->
+
+- [Hammers of Time](http://bit.ly/hammers-of-time): Open marathon for applied rationality. (Node.js, Telegraf.js, Next.js, Google APIs) — [Github](https://github.com/m0rtyn/marathons-bot)
     
-    - Made a minimalistic app based on researches of the [temporal discounting (feedback speed)](https://www.frontiersin.org/articles/10.3389/fpsyg.2017.01007/full#B37) and [successive approximations (small goals)](https://en.wikipedia.org/wiki/Shaping_(psychology)).
-    - Released a public version on [Product Hunt](https://www.producthunt.com/posts/pokoy) and [Github](https://github.com/m0rtyn/pokoy).
-    - PH launch: 102 upvotes, 7th product of the day
-- [Hammers of Time](http://bit.ly/hammers-of-time): an open marathon on applied rationality (Ru)
-    
-    Techstack: Telegraf.js, Next.js, Google APIs, 
-    
-    - Designed, organized, and promoted the project by myself. The training was attended by 160 people.
-    - Developed tools for gamification such as a Telegram-bot to keep track of progress, a website with a leaderboard of teams and marathon statistics.
-    - It was my fourth marathon, and I have seen an increase in participants and donations each time.
-- [So meta](https://someta.site): personal blog (Ru)
-    
-    Techstack: Next.js, Notion API
-    
-    - Made notes on learning about the world: a brain and thinking, programming and planning, rationality and emotions.
-    - I created a Notion-based article management system to make editing process as easy as possible.
+    <!-- - Разработал, организовал и продвигал проект самостоятельно. В марафоне приняло участие более 160 человек.
+    - Придумал инструменты для геймификации, такие как Telegram-бот для отслеживания прогресса, сайт со результатами команд, и статистику участников. 
+    - 50+ активных участников, 16 человек завершили марафон. -->
+
+- [Такая Мета](https://someta.netlify.app): Personal blog (Next.js, Notion API)
 
 ### Talks
 
-- Rationality: the art of being less wrong
-12 Storeez Talks / So Meta Channel
-- Open source: why developers share
-BaltArtek
-- Motion: Personal task system in Notion
-Russian Notion Community
-- Testosterone Driven Development: 10 signs of a burnt out developer
-KolesaConf
-- 255 shades of gray: color models in CSS
-PiterCSS Meetup
-- Willpower Weakness: how to unload and maintain a mental resource
-BurningLead Meetup / Problems of White Ideas
-- 5 layout improvements... before you invent your own
-Dilijan Computer Club / So Meta Channel / Vas3k.club
-- Not by QWERTY alone: keyboard layout overview
-PiterPy Meetup / DevNSK Backend Meetup
+I have been a speaker at: [PiterCSS Meetup](https://vk.com/pitercss_meetup), [PiterPy Meetup](https://twitter.com/piterpy_meetup), [Burning Lead](https://twitter.com/BurningLead), [Kolesa Conf](https://kolesa-conf.kz/), [Vas3k.Club](https://vas3k.club). You can watch some of them here: <https://bit.ly/martyn-talks>
 
 ### Articles
 
