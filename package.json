@@ -1,0 +1,22 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/m0rtyn/cv.git",
+  "author": "Martyn <zogacc@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.4.5",
+    "cheerio": "^1.0.0-rc.12",
+    "gray-matter": "^4.0.3",
+    "highlight.js": "^11.8.0",
+    "markdown-it": "^13.0.1",
+    "markdown-it-checkbox": "^1.1.0",
+    "markdown-it-container": "^3.0.0",
+    "markdown-it-emoji": "^2.0.2",
+    "markdown-it-include": "^2.0.0",
+    "markdown-it-named-headers": "^0.0.4",
+    "markdown-it-plantuml": "^1.4.1",
+    "mkdirp": "^3.0.1"
+  }
+}
