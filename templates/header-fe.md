@@ -1,3 +1,1 @@
-# Владимир Мартыненко
-
-## Frontend Developer
+# Владимир Мартыненко | Frontend Developer

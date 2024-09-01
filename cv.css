@@ -1,7 +1,7 @@
 h1, h2, h3 {
   font-family: 'iA Writer Duospace', sans-serif;
   font-weight: 600;
-  margin: 1.4em 0;
+  margin: 1.3em 0;
 }
 
 body {
@@ -10,16 +10,16 @@ body {
 }
 
 h1 {
-  font-size: 26px;
+  font-size: 24px;
   border-bottom: 1px solid #0004;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 22px;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 16px;
   position: relative;
 }
 
@@ -37,12 +37,12 @@ a {
 }
 
 blockquote {
-  font-size: 16px;
+  font-size: 14px;
   border-left: 3px solid #0004;
-  padding: 0.75rem;
+  padding: 0.5rem;
   background-color: rgba(0,0,0,0.025);
   border-radius: 0.25rem;
-  margin: 1rem 0 0 0;
+  margin: 0.8rem 0 0 0;
 }
 
 blockquote p {
