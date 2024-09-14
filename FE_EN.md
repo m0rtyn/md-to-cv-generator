@@ -1,6 +1,6 @@
 # Vladimir Martynenko
 
-## **Frontend Team lead / Engineering manager**
+## **Frontend Developer**
 
 |                      |                                  |                      |  
 | -------------------- | -------------------------------- | ------------------- |  
