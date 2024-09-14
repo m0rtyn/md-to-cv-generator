@@ -1,6 +1,4 @@
-# Vladimir Martynenko
-
-## **Frontend Developer**
+# Vladimir Martynenko | Frontend Developer
 
 |                      |                                  |                      |  
 | -------------------- | -------------------------------- | ------------------- |  
