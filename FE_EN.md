@@ -2,135 +2,92 @@
 
 ## **Frontend Team lead / Engineering manager**
 
-|  |  |
-| --- | --- |
-| Experience:  **7 years** | Email:  [zogacc@gmail.com](mailto:zogacc@gmail.com) |
-| Languages:  **RUS / ENG** | Telegram:  [m0rtyn.t.me](https://m0rtyn.t.me) |
-| Location: **Armenia** | Github:  [github.com/m0rtyn](https://github.com/m0rtyn) |
+|                      |                                  |                      |  
+| -------------------- | -------------------------------- | ------------------- |  
+| Experience:  **8 years**    | Language:  **RU / ENG (B2)**       | Location: **Serbia (Novi Sad)**   |  
+| Email: [zogacc@gmail.com](mailto:zogacc@gmail.com) | Telegram: [m0rtyn.t.me](https://m0rtyn.t.me)  |  Github: [github.com/m0rtyn](https://github.com/m0rtyn) |  
 
-> 👋 Hello! My name is Vova, but many call me Martyn. Currently, I am seeking a position as a Frontend Developer.
+> 👋 Hello! I am a Senior Frontend Developer with 8 years of experience.
 >
-> With experience in React, Vue, and Angular (7+ years), I have mastered universal principles of code organization. However, React holds a special place in my heart.
+> I develop with React and TypeScript. I have worked on projects using Vue and Angular 2+. Automation with Node.js and Python is in my skillset. I pay attention to code architecture, maintainability, and complexity.
 >
-> I use TypeScript and keep a close eye on code complexity. I also occasionally work with Node.js and Python.
-> 
-> Processes are also significant to me: I am an advocate of agile methodologies, extreme programming, and [FFF](https://fff.works/).
+> I am able to create design systems in collaboration with designers. I educate frontend developers and improve communication processes. I provide detailed code reviews with explanations, avoiding accusations and harmful criticism.
+>
+> Teamwork is important to me: I am experienced in agile methodologies and can plan in uncertainty. I conduct task grooming and retrospectives, avoiding wasted collective time. I easily build trustful relationships with colleagues.
 
 ## Experience
 
-### Frontend Team Lead @ HTML Academy
+### Frontend Lead @ Xyro.io (Web3, GamyFi, SocialFi)
 
-*Remote, Full-time, January '23 - July '23*
+*Remote, full-time, January '2023 — present*
 
-- Led an infrastructure team supporting more than 10 microservices.
-- Assisted in the successful release of 5 projects within six months.
-- Implemented collection of technical performance metrics in some services (Web Vitals, Prometheus, Grafana).
-- Introduced poker planning to measure team productivity.
-- Developed bots to assist with code reviews and sprint result tracking.
-- Conducted an analysis of the technical stack in the team's projects, updated dependencies, and reduced the number of vulnerabilities by half (400 → 200).
+- Implemented a killer feature: a gaming price chart for cryptocurrencies with real-time updates. Documented the code and screen recordings to help the rest of the team understand the magic happening there. [Demo ▶️](https://youtu.be/4XyXVeOLq8Q)
+- Developed core features: 3 out of 5 gaming modes, while maintaining and enhancing all 5.
+- Created a multi-step authentication flow: OAuth, Web3, login via referral code, and NFT
+- Defined a flexible system design (FSD) and the technical stack for the application
+- Ensured the consistency of the design system despite changes in the design team, pivots, and transition to a mobile audience
 
-### Frontend dev @ Vilantis.ai
+### Frontend dev @ Vilantis.ai (Lithuanian outsourcer)
 
-*Remote, Contractor, April ‘22 — December ‘22*
+*Remote, contractor, part-time, April '22 — December '22*
 
-Projects: service for an American clinic (Nuxt.js), a website with statistics of Lithuanian companies (Next.js)
+Projects: service for American clinic patients (Nuxt.js), website with statistics of Lithuanian companies (Next.js)
 
-- Improved a legacy JS service (Vue2) using *Best Practices* and updating the tech-stack (Vue 2 → 2.7, Nuxt 2 → Bridge)
-- Added static typing without moving to TypeScript(JSDoc + VSCode) > Explicit type errors and better intellisense in IDE
-- Added autogeneration of types from GraphQL schema to TypeScript
+- Features: booking consultations and treatment appointment forms
+- Updated an outdated project (JS/Vue2) for compatibility and maintainability (Vue 2 → 2.7, Nuxt 2 → Bridge)
+- Achieved strong typing and data type transparency when switching to TS was limited by the stakeholder (JSDoc + VSCode)
+- Added type autogeneration from GraphQL
 
-<!-- ### JS Mentor @ Elbrus Bootcamp
+### Lead Frontend Developer @ 12 Storeez (Marketplace, internal services)
 
-*Hybrid, Full-time, January ‘22 — March ‘22*
+*Remote, full-time, August '21 — January '22*
 
-- Gave lectures about frontend development (React) and about intermediate JavaScript features (like Promises, prototype inheritance and Classes)
-- Wrote promotion articles to [Habr.com](http://Habr.com)
-- Made a welcome talk on the open school day
-- Conducted workshops with advanced JS in the final phase of the student teaching program
-- Created a new lecture about Typescript -->
+Project: internal logistics service for managing order delivery across multiple countries
 
-### Frontend lead @ 12 Storeez
+- Developed the frontend service from scratch (Angular 13, Nx)
+- Conducted team retrospectives → made it easier to prevent burnout and acknowledge improvements
+- Improved the accuracy and speed of the team's poker planning (15 minutes instead of 30+)
+- Initiated and conducted product update demos with clients → product requirements were clarified before release
+- Curated and updated the backlog for feature prioritization
 
-*Remote, Full-time, August ‘21 — January ‘22*
+### Frontend Developer @ Semrush (SaaS, internal services)
 
-Project: In-house logistics service to manage worldwide deliveries
+*Office, full-time, August '19 — July '20*
 
-- Developed front-end of a logistics service (Angular 13, Nx)
-- Held team’s retros, also was invited to introduce retro to the new team
-- Made team’s poker planning faster and more accurate (15 mins instead of 30+)
-- Maintained and groomed the product backlog
-- Every two weeks held product demos with stakeholders to gather feedback
+Project: internal service for setting goals in company units (similar to OKR)
 
-<!-- ### Lead of a Frontend internship program @ KODE
+- Created an interactive organizational structure with a map of departments and teams (D3, React)
+- Contributed to the OSS library [bkrem/react-d3-tree](https://bkrem.github.io/react-d3-tree/)
+- Implemented code review with collective code ownership
+- Optimized the sprint planning estimation approach and implemented it with an Agile coach
 
-*On-site, Full-time, September ‘20 — January ‘21*
+### Web Developer @ Noveo (Outsourcer)
 
-- Created a training program for frontend internship
-- Taking into account the needs of the company: gave interns an extensive theoretical and practical training for 4 weeks, prepared a documented program for future internships, made video records of the lectures
-- Delivered lectures for front-end interns
-- Developed a web-app from scratch and decomposed it to gradual stages: react, styled components, storybook, redux, typescript
-- Implemented Github Classroom to automate internship’s exercises
-- Helped the company's experts give lectures on specific topics
-- Gave a talk about a declarative code review for a team meetup -->
+*Office, full-time, August '17 — December '18*
 
-### Frontend dev @ Semrush
+- Designed the interface for the game ["Go to IT"](https://store.steampowered.com/app/953060/Go_to_IT/) (React)
+- Developed interfaces for American golf and baseball training service (Vue)
+- Designed for a French online clothing platform (Angular)
 
-*On-site, Fullt-ime, August ‘19 — Jule ‘20*
+### Web Developer @ Armaseti (Email marketing)
 
-Project: In-house service for setting goals of company units (OKR-like)
+*Hybrid, full-time, July '16 — August '17*
 
-- Created interactive organizational structure of the company (D3 & React)
-- Contributed to [bkrem/react-d3-tree](https://bkrem.github.io/react-d3-tree/) library
-- Introduced code review with collective code ownership
-- Optimized approach to estimates in a sprint planning process and validated with an agile coach
-
-<!-- ### Mentor @ HTML Academy
-
-*Remote, Freelance*
-
-- Mentored a student to complete a course in layout with the highest grade (HTML Academy)
-- Gave lectures for interns on the basics of HTML & CSS & DevTools -->
-
-<!-- ### Markup dev @ Black Deck Crew
-
-Remote, Seasonal, *September ‘18 — December ‘18*
-
-- Made a markup of the interface for ["Go to IT"](https://store.steampowered.com/app/953060/Go_to_IT/) game (React) -->
-
-### Markup dev @ Noveo
-
-*On-site, Full-time, *August ‘17 — December ‘18* 
-
-- Made a markup of the interface for ["Go to IT"](https://store.steampowered.com/app/953060/Go_to_IT/) game (React)
-- Made markup for American golf and baseball training service (Vue)
-- Made markup for French clothes marketplace (Angular)
-
-### Markup dev @ Armaseti
-
-*On-site, Full-time, июль '16 — август '17*
-
-- Верстал маркетинговую рассылку и лендинги компании
-- Сделал новый дизайн для писем
-- Перешёл с конструктора писем на полноценную вёрстку с расширенными возможностями и гибкостью 
-- Сделал сложный векторный макет для измерителя диаметра запорной арматуры
+- Designed marketing newsletters and landing pages for the company
+- Created a new design for emails
+- Transitioned from email template builders to full-fledged flexible custom layouts
+- Created a complex vector layout for a valve diameter meter
 
 ## Hobbies
 
-I enjoy giving talks (>30) and writing articles (>50). I read a lot (>200b) and meditate (>400h). Below are examples of personal projects.
+> I enjoy giving talks (>30) and writing articles (>50). I contribute to open-source projects like Obsidian, Raycast, VSCode, and React libraries.
 
-- [Pokoy](https://pokoy.app): App for meditation (Firebase, React, Redux Toolkit, PWA) — [Product Hunt](https://www.producthunt.com/products/pokoy)
-    
-    <!-- - Создал минималистичное приложение на основе исследований [«временного дисконтирования» (скорости обратной связи)](https://www.frontiersin.org/articles/10.3389/fpsyg.2017.01007/full#B37) и [«последовательных приближений» (маленьких цели)](https://en.wikipedia.org/wiki/Shaping_(psychology)).
-    - Запустил на Product Hunt: 102 голоса "вверх", 7-й продукт дня -->
+### Side Projects
 
-- [Hammers of Time](http://bit.ly/hammers-of-time): Open marathon for an applied rationality. (Node.js, Telegraf.js, Next.js, Google APIs) — [Github](https://github.com/m0rtyn/marathons-bot)
-    
-    <!-- - Разработал, организовал и продвигал проект самостоятельно. В марафоне приняло участие более 160 человек.
-    - Придумал инструменты для геймификации, такие как Telegram-бот для отслеживания прогресса, сайт со результатами команд, и статистику участников. 
-    - 50+ активных участников, 16 человек завершили марафон. -->
+- [Pokoy](https://pokoy.app): A meditation timer app (Firebase, React, Redux Toolkit, PWA) — [Product Hunt](https://www.producthunt.com/products/pokoy)
 
-- [So Meta](https://someta.netlify.app): Personal blog (~~Next.js, Notion API~~ 11ty)
+- [Marathons TG bot](http://bit.ly/hammers-of-time): Bot for learning marathons (Node.js, Telegraf.js, Next.js, Google APIs) — [Github](https://github.com/m0rtyn/marathons-bot)
 
 ### Talks
 
-I have been a speaker at: [PiterCSS Meetup](https://vk.com/pitercss_meetup), [PiterPy Meetup](https://twitter.com/piterpy_meetup), [Burning Lead](https://twitter.com/BurningLead), [Kolesa Conf](https://kolesa-conf.kz/), [Vas3k.Club](https://vas3k.club). You can watch some of them here: <https://bit.ly/martyn-talks>
+I have spoken at: [PiterCSS Meetup](https://vk.com/pitercss_meetup), [PiterPy Meetup](https://twitter.com/piterpy_meetup), [Burning Lead](https://twitter.com/BurningLead), [Kolesa Conf](https://kolesa-conf.kz/), [Vas3k.Club](https://vas3k.club). You can watch some of them [here](https://bit.ly/martyn-talks).
