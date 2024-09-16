@@ -26,6 +26,7 @@ Tech stack: React, Typescript, GraphQL (Apollo Client), RadixUI, Trading View Ch
 - Created a multi-step authentication flow: OAuth, Web3, login via referral code, and NFT.
 - Defined a flexible system design and the technical stack for the application
 - Ensured the consistency of the design system despite changes in the design team, pivots, and transition to a mobile audience
+- Improve team DX by implementing linting, code formatting, AI tooling, unit testing, and utilizing Telegram bots for easy PR reviews and task assignments.
 
 ### Frontend dev @ Vilantis.ai (Lithuanian outsourcer)
 
