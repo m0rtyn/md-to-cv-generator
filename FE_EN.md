@@ -88,7 +88,7 @@ Project: internal service for setting goals in company units (similar to OKR)
 
 > I enjoy giving talks (>30) and writing articles (>50). I contribute to open-source projects like Obsidian, Raycast, VSCode, and React libraries.
 
-### Side Projects
+### Pet Projects
 
 - [Pokoy](https://pokoy.app): A meditation timer app (Firebase, Google Cloud Platform, React, Redux Toolkit, PWA, GH Actions) — [Product Hunt](https://www.producthunt.com/products/pokoy)
 
