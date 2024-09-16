@@ -19,20 +19,24 @@
 
 *Remote, full-time, January '2023 — present*
 
-- Implemented a killer feature: a gaming price chart for cryptocurrencies with real-time updates. Documented the code and screen recordings to help the rest of the team understand the magic happening there. [Demo ▶️](https://youtu.be/4XyXVeOLq8Q)
+Tech stack: React, Typescript, GraphQL (Apollo Client), RadixUI, Trading View Charts, Thirdweb/Wagmi, FSD
+
+- Implemented a killer feature: a gaming price chart for cryptocurrencies with real-time updates. Documented the code and screen recordings to help the team understand the magic happening there. [Demo ▶️](https://youtu.be/4XyXVeOLq8Q)
 - Developed core features: 3 out of 5 gaming modes, while maintaining and enhancing all 5.
-- Created a multi-step authentication flow: OAuth, Web3, login via referral code, and NFT
-- Defined a flexible system design (FSD) and the technical stack for the application
+- Created a multi-step authentication flow: OAuth, Web3, login via referral code, and NFT.
+- Defined a flexible system design and the technical stack for the application
 - Ensured the consistency of the design system despite changes in the design team, pivots, and transition to a mobile audience
 
 ### Frontend dev @ Vilantis.ai (Lithuanian outsourcer)
 
 *Remote, contractor, part-time, April '22 — December '22*
 
-Projects: service for American clinic patients (Nuxt.js), website with statistics of Lithuanian companies (Next.js)
+Tech stack: Nuxt.js, Next.js, Charts.js, GraphQL
+
+Projects: service for American clinic patients, website with statistics of Lithuanian companies
 
 - Features: booking consultations and treatment appointment forms
-- Updated an outdated project (JS/Vue2) for compatibility and maintainability (Vue 2 → 2.7, Nuxt 2 → Bridge)
+- Updated an outdated project (JS/Vue2) for compatibility and maintainability (Vue 2 → 2.7, Nuxt 2 → Nuxt Bridge)
 - Achieved strong typing and data type transparency when switching to TS was limited by the stakeholder (JSDoc + VSCode)
 - Added type autogeneration from GraphQL
 
@@ -40,9 +44,11 @@ Projects: service for American clinic patients (Nuxt.js), website with statistic
 
 *Remote, full-time, August '21 — January '22*
 
+Tech stack: Angular 13, NX, gRPC, protobufs, Nest.js, Material UI
+
 Project: internal logistics service for managing order delivery across multiple countries
 
-- Developed the frontend service from scratch (Angular 13, Nx)
+- Developed the frontend service from scratch
 - Conducted team retrospectives → made it easier to prevent burnout and acknowledge improvements
 - Improved the accuracy and speed of the team's poker planning (15 minutes instead of 30+)
 - Initiated and conducted product update demos with clients → product requirements were clarified before release
@@ -52,6 +58,8 @@ Project: internal logistics service for managing order delivery across multiple 
 
 *Office, full-time, August '19 — July '20*
 
+Tech stack: React, Redux, Typescript, Intergalactic UI, ReasonScript, Canvas API 
+
 Project: internal service for setting goals in company units (similar to OKR)
 
 - Created an interactive organizational structure with a map of departments and teams (D3, React)
@@ -59,7 +67,7 @@ Project: internal service for setting goals in company units (similar to OKR)
 - Implemented code review with collective code ownership
 - Optimized the sprint planning estimation approach and implemented it with an Agile coach
 
-### Web Developer @ Noveo (Outsourcer)
+### Markup Developer @ Noveo (Outsourcer)
 
 *Office, full-time, August '17 — December '18*
 
@@ -67,7 +75,7 @@ Project: internal service for setting goals in company units (similar to OKR)
 - Developed interfaces for American golf and baseball training service (Vue)
 - Designed for a French online clothing platform (Angular)
 
-### Web Developer @ Armaseti (Email marketing)
+### Markup Developer @ Armaseti (Email marketing)
 
 *Hybrid, full-time, July '16 — August '17*
 
@@ -82,9 +90,9 @@ Project: internal service for setting goals in company units (similar to OKR)
 
 ### Side Projects
 
-- [Pokoy](https://pokoy.app): A meditation timer app (Firebase, React, Redux Toolkit, PWA) — [Product Hunt](https://www.producthunt.com/products/pokoy)
+- [Pokoy](https://pokoy.app): A meditation timer app (Firebase, Google Cloud Platform, React, Redux Toolkit, PWA, GH Actions) — [Product Hunt](https://www.producthunt.com/products/pokoy)
 
-- [Marathons TG bot](http://bit.ly/hammers-of-time): Bot for learning marathons (Node.js, Telegraf.js, Next.js, Google APIs) — [Github](https://github.com/m0rtyn/marathons-bot)
+- [Marathons TG bot](http://bit.ly/hammers-of-time): Bot for learning marathons (Node.js, Telegraf.js, Next.js, Google Cloud Platform, Google APIs) — [Github](https://github.com/m0rtyn/marathons-bot)
 
 ### Talks
 
