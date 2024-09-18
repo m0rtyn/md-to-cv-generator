@@ -5,21 +5,21 @@
 | Experience:  **8 years**    | Language:  **RU / ENG (B2)**       | Location: **Serbia (Novi Sad)**   |  
 | Email: [zogacc@gmail.com](mailto:zogacc@gmail.com) | Telegram: [m0rtyn.t.me](https://m0rtyn.t.me)  |  Github: [github.com/m0rtyn](https://github.com/m0rtyn) |  
 
-> 👋 Hello! I am a Senior Frontend Developer with 8 years of experience.
->
-> I develop with React and TypeScript. I have worked on projects using Vue and Angular 2+. Automation with Node.js and Python is in my skillset. I pay attention to code architecture, maintainability, and complexity.
->
-> I am able to create design systems in collaboration with designers. I educate frontend developers and improve communication processes. I provide detailed code reviews with explanations, avoiding accusations and harmful criticism.
->
-> Teamwork is important to me: I am experienced in agile methodologies and can plan in uncertainty. I conduct task grooming and retrospectives, avoiding wasted collective time. I easily build trustful relationships with colleagues.
+> 👋 Hey there! I’m a seasoned Frontend Developer.
+> 
+> I specialize in React, TypeScript, with some production experience in Vue 2 and Angular 2+. I automate with Node.js & Python, focusing on clean code architecture.
+> 
+> I collaborate with designers on design systems, coach developers, and improve communication. My code reviews are constructive and foster a positive environment.
+> 
+> I excel in agile methodologies, task management, and team relationships.
 
 ## Experience
 
-### Frontend Lead @ Xyro.io (Web3, GamyFi, SocialFi)
+### Frontend Lead @ Xyro.io (Startup, Web3, GamyFi, SocialFi)
 
 *Remote, full-time, January '2023 — present*
 
-Tech stack: React, Typescript, GraphQL (Apollo Client), RadixUI, Trading View Charts, Thirdweb/Wagmi, FSD
+**Techs**: React, Typescript, GraphQL (Apollo Client), RadixUI, Trading View Charts, Thirdweb/Wagmi, FSD
 
 - Implemented a killer feature: a gaming price chart for cryptocurrencies with real-time updates. Documented the code and screen recordings to help the team understand the magic happening there. [Demo ▶️](https://youtu.be/4XyXVeOLq8Q)
 - Developed core features: 3 out of 5 gaming modes, while maintaining and enhancing all 5.
@@ -32,9 +32,9 @@ Tech stack: React, Typescript, GraphQL (Apollo Client), RadixUI, Trading View Ch
 
 *Remote, contractor, part-time, April '22 — December '22*
 
-Tech stack: Nuxt.js, Next.js, Charts.js, GraphQL
+**Techs**: Nuxt.js, Next.js, Charts.js, GraphQL
 
-Projects: service for American clinic patients, website with statistics of Lithuanian companies
+**Projects**: service for American clinic patients, website with statistics of Lithuanian companies
 
 - Features: booking consultations and treatment appointment forms
 - Updated an outdated project (JS/Vue2) for compatibility and maintainability (Vue 2 → 2.7, Nuxt 2 → Nuxt Bridge)
@@ -45,9 +45,9 @@ Projects: service for American clinic patients, website with statistics of Lithu
 
 *Remote, full-time, August '21 — January '22*
 
-Tech stack: Angular 13, NX, gRPC, protobufs, Nest.js, Material UI
+**Techs**: Angular 13, NX, gRPC, protobufs, Nest.js, Material UI
 
-Project: internal logistics service for managing order delivery across multiple countries
+**Project**: internal logistics service for managing order delivery across multiple countries
 
 - Developed the frontend service from scratch
 - Conducted team retrospectives → made it easier to prevent burnout and acknowledge improvements
@@ -59,9 +59,9 @@ Project: internal logistics service for managing order delivery across multiple 
 
 *Office, full-time, August '19 — July '20*
 
-Tech stack: React, Redux, Typescript, Intergalactic UI, ReasonScript, Canvas API 
+**Techs**: React, Redux, Typescript, Intergalactic UI, ReasonScript, Canvas API 
 
-Project: internal service for setting goals in company units (similar to OKR)
+**Project**: internal service for setting goals in company units (similar to OKR)
 
 - Created an interactive organizational structure with a map of departments and teams (D3, React)
 - Contributed to the OSS library [bkrem/react-d3-tree](https://bkrem.github.io/react-d3-tree/)
@@ -72,18 +72,15 @@ Project: internal service for setting goals in company units (similar to OKR)
 
 *Office, full-time, August '17 — December '18*
 
+**Techs**: SCSS, Bootstrap, JSX
+
 - Designed the interface for the game ["Go to IT"](https://store.steampowered.com/app/953060/Go_to_IT/) (React)
-- Developed interfaces for American golf and baseball training service (Vue)
-- Designed for a French online clothing platform (Angular)
 
 ### Markup Developer @ Armaseti (Email marketing)
 
 *Hybrid, full-time, July '16 — August '17*
 
-- Designed marketing newsletters and landing pages for the company
-- Created a new design for emails
-- Transitioned from email template builders to full-fledged flexible custom layouts
-- Created a complex vector layout for a valve diameter meter
+**Techs**: SCSS, Foundation UI for Email, RegExp
 
 ## Hobbies
 
@@ -91,9 +88,11 @@ Project: internal service for setting goals in company units (similar to OKR)
 
 ### Pet Projects
 
-- [Pokoy](https://pokoy.app): A meditation timer app (Firebase, Google Cloud Platform, React, Redux Toolkit, PWA, GH Actions) — [Product Hunt](https://www.producthunt.com/products/pokoy)
+- [Pokoy](https://pokoy.app): A meditation timer app  — [Product Hunt](https://www.producthunt.com/products/pokoy)
+  - Techs: Firebase, Google Cloud Platform, React, Redux Toolkit, PWA, GH Actions
 
-- [Marathons TG bot](http://bit.ly/hammers-of-time): Bot for learning marathons (Node.js, Telegraf.js, Next.js, Google Cloud Platform, Google APIs) — [Github](https://github.com/m0rtyn/marathons-bot)
+- [Marathons TG bot](http://bit.ly/hammers-of-time): Bot for collective learning marathons — [Github](https://github.com/m0rtyn/marathons-bot)
+  - Techs: Node.js, Telegraf.js, Next.js, Google Cloud Platform, Google APIs
 
 ### Talks
 
