@@ -1,7 +1,7 @@
 h1, h2, h3 {
   font-family: 'iA Writer Duospace', sans-serif;
-  font-weight: 600;
-  margin: 1.3em 0;
+  font-weight: bold;
+  margin: 1em 0;
 }
 
 body {
@@ -10,12 +10,13 @@ body {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 26px;
   border-bottom: 1px solid #0004;
 }
 
 h2 {
   font-size: 22px;
+  border-bottom: 1px solid #00000038;
 }
 
 h3 {
@@ -26,8 +27,9 @@ h3 {
 h3::before {
   content: "• ";
   position: absolute;
-  left: -1em;
-  color: #0004;
+  left: -0.7em;
+  color: #0005;
+  font-size: 1.5rem;
 }
 
 a {
@@ -36,18 +38,22 @@ a {
   text-decoration: underline;
 }
 
+strong {
+  font-weight: 400;
+}
+
 blockquote {
   font-size: 14px;
   border-left: 3px solid #0004;
   padding: 0.5rem;
-  background-color: rgba(0,0,0,0.025);
-  border-radius: 0.25rem;
+  background-color: rgba(0,0,0,0.035);
+  border-radius: 0.5rem;
   margin: 0.8rem 0 0 0;
 }
 
 blockquote p {
   margin-top: 0;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 blockquote p:last-child {
@@ -60,4 +66,33 @@ table > thead > tr > th {
 
 li > p {
   margin: 0.5rem 0;
+}
+
+/* Info about work */
+h3 + p {
+  color: #0009;
+  margin-top: -1rem;
+}
+/* Techs */
+h3 + p + p {
+  margin-bottom: 0;
+}
+/* Projects */
+h3 + p + p + p {
+  margin-top: 0;
+}
+
+table {
+  background-color: rgba(0,0,0,0.035);
+  border-radius: 0.5em;
+}
+table > tbody > tr + tr > td {
+  border-top: 3px solid #00000035;
+}
+table > tbody > tr > td + td {
+  border-left: 3px solid #00000035;
+}
+table > thead > tr > th {
+  padding-top: 0;
+  padding-bottom: 0;
 }

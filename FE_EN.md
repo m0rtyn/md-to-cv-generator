@@ -96,4 +96,4 @@
 
 ### Talks
 
-I have spoken at: [PiterCSS Meetup](https://vk.com/pitercss_meetup), [PiterPy Meetup](https://twitter.com/piterpy_meetup), [Burning Lead](https://twitter.com/BurningLead), [Kolesa Conf](https://kolesa-conf.kz/), [Vas3k.Club](https://vas3k.club). You can watch some of them [here](https://bit.ly/martyn-talks).
+> I have spoken at: [PiterCSS Meetup](https://vk.com/pitercss_meetup), [PiterPy Meetup](https://twitter.com/piterpy_meetup), [Burning Lead](https://twitter.com/BurningLead), [Kolesa Conf](https://kolesa-conf.kz/), [Vas3k.Club](https://vas3k.club). You can watch some of them [here](https://bit.ly/martyn-talks).
