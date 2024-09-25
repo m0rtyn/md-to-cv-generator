@@ -28,7 +28,7 @@
 - Ensured the consistency of the design system despite changes in the design team, pivots, and transition to a mobile audience
 - Improve team DX by implementing linting, code formatting, AI tooling, unit testing, and utilizing Telegram bots for easy PR reviews and task assignments.
 
-### Frontend dev @ Vilantis.ai (Lithuanian outsourcer)
+### Frontend dev @ Vilantis.ai (Outsourcer)
 
 *Remote, contractor, part-time, April '22 — December '22*
 
@@ -85,6 +85,7 @@
 ## Hobbies
 
 > I enjoy giving talks (>30) and writing articles (>50). I contribute to open-source projects like Obsidian, Raycast, VSCode, and React libraries.
+> I have spoken at: [PiterCSS Meetup](https://vk.com/pitercss_meetup), [PiterPy Meetup](https://twitter.com/piterpy_meetup), [Burning Lead](https://twitter.com/BurningLead), [Kolesa Conf](https://kolesa-conf.kz/), [Vas3k.Club](https://vas3k.club). You can watch some of them [here](https://bit.ly/martyn-talks).
 
 ### Pet Projects
 
@@ -93,7 +94,3 @@
 
 - [Marathons TG bot](http://bit.ly/hammers-of-time): Bot for collective learning marathons — [Github](https://github.com/m0rtyn/marathons-bot)
   - Techs: Node.js, Telegraf.js, Next.js, Google Cloud Platform, Google APIs
-
-### Talks
-
-> I have spoken at: [PiterCSS Meetup](https://vk.com/pitercss_meetup), [PiterPy Meetup](https://twitter.com/piterpy_meetup), [Burning Lead](https://twitter.com/BurningLead), [Kolesa Conf](https://kolesa-conf.kz/), [Vas3k.Club](https://vas3k.club). You can watch some of them [here](https://bit.ly/martyn-talks).
