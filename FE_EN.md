@@ -21,7 +21,7 @@
 
 **Techs**: React, Typescript, GraphQL (Apollo Client), RadixUI, Trading View Charts, Thirdweb/Wagmi, FSD
 
-- Implemented a killer feature: a gaming price chart for cryptocurrencies with real-time updates. Documented the code and screen recordings to help the team understand the magic happening there. [Demo ▶️](https://youtu.be/4XyXVeOLq8Q)
+- Implemented a killer feature: a gaming price chart for cryptocurrencies with real-time updates. Documented the code and screen recordings to help the team understand the magic happening there. [Demo ▶️](https://youtu.be/4XyXVeOLq8Q)(https://bit.ly/cv-demo-1)
 - Developed core features: 3 out of 5 gaming modes, while maintaining and enhancing all 5.
 - Created a multi-step authentication flow: OAuth, Web3, login via referral code, and NFT.
 - Defined a flexible system design and the technical stack for the application
