@@ -85,12 +85,12 @@
 ## Hobbies
 
 > I enjoy giving talks (>30) and writing articles (>50). I contribute to open-source projects like Obsidian, Raycast, VSCode, and React libraries.
-> I have spoken at: [PiterCSS Meetup](https://vk.com/pitercss_meetup), [PiterPy Meetup](https://twitter.com/piterpy_meetup), [Burning Lead](https://twitter.com/BurningLead), [Kolesa Conf](https://kolesa-conf.kz/), [Vas3k.Club](https://vas3k.club). You can watch some of them [here](https://bit.ly/martyn-talks).
+> I have spoken at: [PiterCSS Meetup](https://vk.com/pitercss_meetup), [PiterPy Meetup](https://twitter.com/piterpy_meetup), [Burning Lead](https://twitter.com/BurningLead), [Kolesa Conf](https://kolesa-conf.kz/), [Vas3k.Club](https://vas3k.club). You can watch some of them [here](https://bit.ly/martyn-talks)(bit.ly/martyn-talks).
 
 ### Pet Projects
 
 - [Pokoy](https://pokoy.app): A meditation timer app  — [Product Hunt](https://www.producthunt.com/products/pokoy)
   - Techs: Firebase, Google Cloud Platform, React, Redux Toolkit, PWA, GH Actions
 
-- [Marathons TG bot](http://bit.ly/hammers-of-time): Bot for collective learning marathons — [Github](https://github.com/m0rtyn/marathons-bot)
+- [Marathons TG bot](http://bit.ly/hammers-of-time)(bit.ly/hammers-of-time): Bot for collective learning marathons — [Github](https://github.com/m0rtyn/marathons-bot)
   - Techs: Node.js, Telegraf.js, Next.js, Google Cloud Platform, Google APIs
