@@ -3,7 +3,7 @@
 |                      |                                  |                      |  
 | -------------------- | -------------------------------- | ------------------- |  
 | Experience:  **8 years**    | Language:  **RU / ENG (B2)**       | Location: **Serbia (Novi Sad)**   |  
-| Email: [zogacc@gmail.com](mailto:zogacc@gmail.com) | Telegram: [m0rtyn.t.me](https://m0rtyn.t.me)  |  Github: [github.com/m0rtyn](https://github.com/m0rtyn) |  
+| Email: [zogacc@gmail.com](mailto:zogacc@gmail.com) | Telegram: [m0rtyn.t.me](https://m0rtyn.t.me)  |  Github / LeetCode: [m0rtyn](https://github.com/m0rtyn) / [u/m0rtyn](https://leetcode.com/u/m0rtyn/) |  
 
 > 👋 Hey there! I’m a seasoned Frontend Developer.
 > 
@@ -21,7 +21,7 @@
 
 **Techs**: React, Typescript, GraphQL (Apollo Client), RadixUI, Trading View Charts, Thirdweb/Wagmi, FSD
 
-- Implemented a killer feature: a gaming price chart for cryptocurrencies with real-time updates. Documented the code and screen recordings to help the team understand the magic happening there. [Demo ▶️](https://youtu.be/4XyXVeOLq8Q)(https://bit.ly/cv-demo-1)
+- Implemented a killer feature: a gaming price chart for cryptocurrencies with real-time updates and high FPS. Documented the code and screen recordings to help the team understand the magic happening there. [Demo ▶️](https://youtu.be/4XyXVeOLq8Q)(https://bit.ly/cv-demo-1)
 - Developed core features: 3 out of 5 gaming modes, while maintaining and enhancing all 5.
 - Created a multi-step authentication flow: OAuth, Web3, login via referral code, and NFT.
 - Defined a flexible system design and the technical stack for the application
@@ -82,7 +82,7 @@
 
 **Techs**: SCSS, Foundation UI for Email, RegExp
 
-## Hobbies
+## Rest activities
 
 > I enjoy giving talks (>30) and writing articles (>50). I contribute to open-source projects like Obsidian, Raycast, VSCode, and React libraries.
 > I have spoken at: [PiterCSS Meetup](https://vk.com/pitercss_meetup), [PiterPy Meetup](https://twitter.com/piterpy_meetup), [Burning Lead](https://twitter.com/BurningLead), [Kolesa Conf](https://kolesa-conf.kz/), [Vas3k.Club](https://vas3k.club). You can watch some of them [here](https://bit.ly/martyn-talks)(bit.ly/martyn-talks).
