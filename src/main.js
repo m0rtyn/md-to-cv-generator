@@ -5,6 +5,7 @@ var os = require('os');
 var INSTALL_CHECK = false;
 
 const config = {
+  'fileToConvert': 'FE.md',
   'plantumlOpenMarker': '@startuml',
   'plantumlCloseMarker': '@enduml',
   'markdown-it-include': {
@@ -24,7 +25,7 @@ const config = {
   'styles': ['./cv.css'],
   'stylesRelativePathFile': true,
   'includeDefaultStyles': true,
-  'outputDirectory': 'dist',
+  'outputDirectory': './',
   'outputDirectoryRelativePathFile': true,
   'executablePath': '',
   'debug': false,
@@ -42,7 +43,7 @@ async function markdownPdf(option_type) {
 
     // check markdown mode
     var uri = {
-      fsPath: `${__dirname}/FE_EN.md` // TODO: args[0]
+      fsPath: `${__dirname}/${config.fileToConvert}` // TODO: args[0]
     };
     var mdfilename = uri.fsPath;
     var ext = path.extname(mdfilename);
@@ -188,7 +189,7 @@ function convertMarkdownToHtml(filename, type, text) {
     md.use(require('markdown-it-checkbox'));
 
     let options = {
-      slugify: Slug
+      slugify: slugify
     }
 
     // emoji
@@ -261,7 +262,7 @@ function convertMarkdownToHtml(filename, type, text) {
 /*
  * https://github.com/microsoft/vscode/blob/ca4ceeb87d4ff935c52a7af0671ed9779657e7bd/extensions/markdown-language-features/src/slugify.ts#L26
  */
-function Slug(string) {
+function slugify(string) {
   try {
     var stg = encodeURI(
       string.trim()
@@ -328,9 +329,8 @@ function exportHtml(data, filePath) {
 /*
  * export a html to a pdf file (html-pdf)
  */
-function exportPdf(data, filename, type, uri) {
-console.debug("🚀 ~ exportPdf ~ uri:", uri)
-
+function exportPdf(data, filename, type, resourceUri) {
+  console.debug("🚀 ~ exportPdf ~ resourceUri:", resourceUri)
   if (!INSTALL_CHECK) {
     console.error('Chromium is not installed!')
     return;
@@ -344,7 +344,7 @@ console.debug("🚀 ~ exportPdf ~ uri:", uri)
 
   var StatusbarMessageTimeout = config['StatusbarMessageTimeout'];
 
-  var exportFilename = getOutputDir(filename, uri);
+  var exportFilename = getOutputDir(filename, resourceUri);
 
   return (async () => {
     try {
@@ -393,6 +393,7 @@ console.debug("🚀 ~ exportPdf ~ uri:", uri)
           landscape_option = false;
         }
 
+        console.debug("🚀 ~ return ~ exportFilename:", exportFilename)
         const options = {
           path: exportFilename,
           scale: config['scale'],
@@ -485,15 +486,16 @@ function deleteFile(path) {
 }
 
 function getOutputDir(filename, resourceUri) {
+  console.debug("🚀 ~ getOutputDir ~ filename, resourceUri:", filename, resourceUri)
   try {
     var outputDir;
     if (resourceUri === undefined) {
       return filename;
     }
-
+    
     var outputDirectory = config['outputDirectory'] || '';
     if (outputDirectory.length === 0) {
-      return filename;
+      return filename
     }
 
     // Use a home directory relative path If it starts with ~.
@@ -521,7 +523,7 @@ function getOutputDir(filename, resourceUri) {
         fsPath: './'
       },
     }
-    if (outputDirectoryRelativePathFile === false && root) {
+    if (outputDirectoryRelativePathFile === false) {
       outputDir = path.join(root.uri.fsPath, outputDirectory);
       mkdir(outputDir);
       return path.join(outputDir, path.basename(filename));
@@ -629,7 +631,7 @@ function readStyles(uri) {
       styles = config['styles'];
       if (styles?.length > 0) {
         for (i = 0; i < styles.length; i++) {
-          style += `<link rel="stylesheet" href="../src/${styles[i]}" type="text/css">`;
+          style += `<link rel="stylesheet" href="src/${styles[i]}" type="text/css">`;
         }
       }
     }
@@ -658,64 +660,13 @@ function readStyles(uri) {
     styles = config['styles'];
     if (styles?.length > 0) {
       for (i = 0; i < styles.length; i++) {
-        style += `<link rel="stylesheet" href="../src/${styles[i]}" type="text/css">`;
+        style += `<link rel="stylesheet" href="src/${styles[i]}" type="text/css">`;
       }
     }
 
     return style;
   } catch (error) {
     console.error('readStyles()', error);
-  }
-}
-
-/*
- * vscode/extensions/markdown-language-features/src/features/previewContentProvider.ts fixHref()
- * https://github.com/Microsoft/vscode/blob/0c47c04e85bc604288a288422f0a7db69302a323/extensions/markdown-language-features/src/features/previewContentProvider.ts#L95
- *
- * Extension Authoring: Adopting Multi Root Workspace APIs ?E Microsoft/vscode Wiki
- * https://github.com/Microsoft/vscode/wiki/Extension-Authoring:-Adopting-Multi-Root-Workspace-APIs
- */
-function fixHref(resource, href) {
-  href = "file:///" + href
-  try {
-
-    // Use href if it is already an URL
-    // const hrefUri = vscode.Uri.parse(href);
-    const hrefUri = new URL(href);
-    if (['http', 'https'].indexOf(hrefUri.protocol || '') >= 0) {
-      return hrefUri.toString();
-    }
-
-    // Use a home directory relative path If it starts with ^.
-    if (href.indexOf('~') === 0) {
-      // return vscode.Uri.file(href.replace(/^~/, os.homedir())).toString();
-      return new URL(href.replace(/^~/, os.homedir())).toString();
-    }
-
-    // Use href as file URI if it is absolute
-    if (path.isAbsolute(href)) {
-      // return vscode.Uri.file(href).toString();
-      return new URL(href).toString();
-    }
-
-    // Use a workspace relative path if there is a workspace and markdown-pdf.stylesRelativePathFile is false
-    var stylesRelativePathFile = config['stylesRelativePathFile'];
-    let root = {
-      uri: {
-        fsPath: './'
-      },
-    }
-    if (stylesRelativePathFile === false && root) {
-      // return vscode.Uri.file(path.join(root.uri.fsPath, href)).toString();
-      // return URL.createObjectURL(path.join(root.uri.fsPath, href)).toString();
-      return new URL(path.join(root.uri.fsPath, href)).toString();
-    }
-
-    // Otherwise look relative to the markdown file
-    // return vscode.Uri.file(path.join(path.dirname(resource.fsPath), href)).toString();
-    return new URL(path.join(path.dirname(resource.fsPath), href)).toString();
-  } catch (error) {
-    console.error('fixHref()', error);
   }
 }
 
@@ -731,7 +682,6 @@ function checkPuppeteerBinary() {
     // bundled Chromium
     const puppeteer = require('puppeteer');
     executablePath = puppeteer.executablePath();
-    console.debug("🚀 ~ checkPuppeteerBinary ~ executablePath:", executablePath)
 
     if (isExistsPath(executablePath)) {
       return true;
