@@ -98,7 +98,7 @@
 
 |                      |                                  |                      |  
 | -------------------- | -------------------------------- | -------------------- |  
-| **Telegram**: [t.me/m0rtyn][telega] <br><br> **Email**: [zogacc@gmail.com][email] |  [**GitHub**.com/m0rtyn][gh] <br><br> [**LeetCode**.com/u/m0rtyn][lc] |  [**LinkedIn**.com/in/m0rtyn][li]  |
+| **Telegram**: [t.me/m0rtyn][telega] <br><br> **Email**: [zogacc@gmail.com][email] |  [**GitHub**.com/m0rtyn][gh] <br><br> [**LeetCode**.com/u/m0rtyn][lc] |  [**LinkedIn**.com/in/m0rtyn][li]  <br><br> [This CV][cv] |
 
 
 [telega]: https://t.me/m0rtyn
@@ -106,3 +106,4 @@
 [gh]: https://github.com/m0rtyn
 [lc]: https://leetcode.com/u/m0rtyn
 [li]: https://linkedin/in/m0rtyn
+[cv]: https://m0rtyn.github.io/cv/FE_EN.pdf
