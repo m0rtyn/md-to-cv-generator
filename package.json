@@ -1,22 +1,34 @@
 {
-  "name": "cv",
+  "name": "md-to-cv-generator",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/m0rtyn/cv.git",
   "author": "Martyn <zogacc@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node src/main.js",
+    "dev": "nodemon --ext \"md, css, js\" src/main.js"
+  },
   "devDependencies": {
     "@types/node": "^20.4.5",
-    "cheerio": "^1.0.0-rc.12",
-    "gray-matter": "^4.0.3",
-    "highlight.js": "^11.8.0",
-    "markdown-it": "^13.0.1",
+    "cheerio": "^0.20.0",
+    "emoji-images": "^0.1.1",
+    "gray-matter": "^4.0.2",
+    "highlight.js": "^9.18.1",
+    "markdown-it": "^10.0.0",
     "markdown-it-checkbox": "^1.1.0",
-    "markdown-it-container": "^3.0.0",
-    "markdown-it-emoji": "^2.0.2",
-    "markdown-it-include": "^2.0.0",
-    "markdown-it-named-headers": "^0.0.4",
+    "markdown-it-container": "^2.0.0",
+    "markdown-it-emoji": "^1.4.0",
+    "markdown-it-include": "^1.1.0",
+    "markdown-it-named-headers": "0.0.4",
     "markdown-it-plantuml": "^1.4.1",
-    "mkdirp": "^3.0.1"
+    "mkdirp": "^1.0.3",
+    "mustache": "^4.0.1",
+    "nodemon": "^3.1.7",
+    "puppeteer-core": "^23.6.0",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "puppeteer": "^23.6.0"
   }
 }

@@ -2,17 +2,20 @@ h1, h2, h3 {
   font-family: 'iA Writer Duo S', sans-serif;
   font-weight: bold;
   margin: 1em 0;
+  padding-bottom: 0.3em;
 }
 
 body {
-  /* font-family: 'Segoe UI', Roboto, Oxygen, BlinkMacSystemFont, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
-  font-family: Roboto, sans-serif;
+  font-family: 'Segoe UI', Roboto, Oxygen, BlinkMacSystemFont, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* font-family: 'iA Writer Duo S', sans-serif; */
+  /* font-family: Roboto, sans-serif; */
 }
 
 h1 {
   font-size: 26px;
-  border-bottom: 1px solid #0004;
+  border-bottom: none;
   margin-top: 0;
+  padding-bottom: 0;
 }
 
 h2 {
@@ -23,30 +26,46 @@ h2 {
 h3 {
   font-size: 16px;
   position: relative;
+  display: flex;
+  justify-content: space-between;
 }
 
-h3::before {
-  content: "• ";
-  position: absolute;
-  left: -0.7em;
-  color: #0005;
-  font-size: 1.5rem;
+h3 > em {
+  font-size: 0.9em;
+  font-weight: 400;
+  color: #0007;
+  margin-left: auto;
+}
+
+ul:has(h3) {
+  padding-left: 0;
+}
+li:has(h3) {
+  list-style-type: none;
+}
+li > h3:before {
+    content: "• ";
+    position: absolute;
+    left: -0.7em;
+    color: #0005;
+    font-size: 1.5rem;
 }
 
 a {
   color: #000A;
   text-decoration-color: #0007;
   text-decoration: underline;
+  text-decoration-color: #0004;
 }
 
 strong {
-  font-weight: 400;
+  font-weight: 500;
 }
 
 blockquote {
-  font-size: 14px;
-  border-left: 3px solid #0004;
-  padding: 0.5rem;
+  font-size: 15px;
+  border: 2px solid #0001;
+  padding: 0.7rem;
   background-color: rgba(0,0,0,0.035);
   border-radius: 0.5rem;
   margin: 0.8rem 0 0 0;
@@ -61,8 +80,30 @@ blockquote p:last-child {
   margin-bottom: 0;
 }
 
+a:not(.hljs) > code {
+  color: #000A;
+  font-weight: 600;
+}
+
+code {
+  color: #000A;
+  background-color: #0001;
+  padding: 0.15em 0.2em;
+  border-radius: 0.3em;
+  font-weight: 500;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
 table > thead > tr > th {
   border-bottom: 0;
+}
+
+ul {
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
 }
 
 li > p {
@@ -71,6 +112,8 @@ li > p {
 
 /* Info about work */
 h3 + p {
+  display: flex;
+  justify-content: space-between;
   color: #0009;
   margin-top: -1rem;
 }
@@ -86,6 +129,7 @@ h3 + p + p + p {
 table {
   background-color: rgba(0,0,0,0.035);
   border-radius: 0.5em;
+  width: 100%;
 }
 table > tbody > tr + tr > td {
   border-top: 3px solid #00000035;
