@@ -5,7 +5,7 @@ var os = require('os');
 var INSTALL_CHECK = false;
 
 const config = {
-  'fileToConvert': 'FE.md',
+  'fileToConvert': 'FE_EN.md',
   'plantumlOpenMarker': '@startuml',
   'plantumlCloseMarker': '@enduml',
   'markdown-it-include': {
@@ -18,7 +18,7 @@ const config = {
   'scale': 1,
   'omitBackground': false,
   'printBackground': true,
-  'displayHeaderFooter': false,
+  'displayHeaderFooter': true,
   'pageRanges': '',
   'highlight': true,
   'highlightStyle': '',
@@ -393,13 +393,14 @@ function exportPdf(data, filename, type, resourceUri) {
           landscape_option = false;
         }
 
-        console.debug("🚀 ~ return ~ exportFilename:", exportFilename)
         const options = {
           path: exportFilename,
           scale: config['scale'],
           displayHeaderFooter: config['displayHeaderFooter'],
-          headerTemplate: transformTemplate(''),
-          footerTemplate: transformTemplate(''),
+          // headerTemplate: transformTemplate(''),
+          // footerTemplate: transformTemplate(''),
+          headerTemplate: `<h1>TEST</h1>`,
+          footerTemplate: `<h6>TEST</h6>`,
           printBackground: config['printBackground'],
           landscape: landscape_option,
           pageRanges: config['pageRanges'] || '',
@@ -441,9 +442,11 @@ function transformTemplate(templateText) {
   if (templateText.indexOf('%%ISO-DATETIME%%') !== -1) {
     templateText = templateText.replace('%%ISO-DATETIME%%', new Date().toISOString().substr(0, 19).replace('T', ' '));
   }
+
   if (templateText.indexOf('%%ISO-DATE%%') !== -1) {
     templateText = templateText.replace('%%ISO-DATE%%', new Date().toISOString().substr(0, 10));
   }
+
   if (templateText.indexOf('%%ISO-TIME%%') !== -1) {
     templateText = templateText.replace('%%ISO-TIME%%', new Date().toISOString().substr(11, 8));
   }

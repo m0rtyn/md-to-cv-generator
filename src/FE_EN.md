@@ -2,8 +2,8 @@
 
 |                      |                                  |                      |  
 | -------------------- | -------------------------------- | -------------------- |  
-| **Experience**:  8 years | **Language**:  RU / ENG (B2) | **Location**: Novi Sad(Serbia) |  
-| **Telegram**: [m0rtyn.t.me](https://m0rtyn.t.me) <br> **Email**: [zogacc@gmail.com](mailto:zogacc@gmail.com) | [**LinkedIn**.com/in/m0rtyn](https://linkedin/in/m0rtyn)  | [**GitHub**.com/m0rtyn](https://github.com/m0rtyn) <br> [**LeetCode**.com/u/m0rtyn](https://leetcode.com/u/m0rtyn/) |  
+| **Experience**:  8 years | **Language**:  RU / ENG (B2) | **Location**: Novi Sad(Serbia) |
+| **Telegram**: [t.me/m0rtyn][telega] | **Email**: [zogacc@gmail.com][email] | [**LinkedIn**.com/in/m0rtyn][li] |
 
 > 👋 Hey there! I’m a seasoned Frontend Developer specializing in `React` and `TypeScript` with automation experience in `Node.js`. I excel in agile methodologies and fostering team collaboration.
 
@@ -74,7 +74,7 @@
 
   **Stack**: SCSS, Bootstrap, JSX
 
-  - Developed the interface for the game ["Go to IT"](https://store.steampowered.com/app/953060/Go_to_IT/)(bit.ly/go-to-it) (React)
+  <!-- - Developed the interface for the game ["Go to IT"](https://store.steampowered.com/app/953060/Go_to_IT/)(bit.ly/go-to-it) (React) -->
 
 - ### Markup Developer @ Armaseti *Jul'16 — Aug'17*
 
@@ -90,7 +90,19 @@
 
 ### Pet Projects
 
-- [Pokoy](https://pokoy.app): A meditation timer app  — [Product Hunt](https://www.producthunt.com/products/pokoy)
-  - **Stack**: Firebase, Google Cloud Platform, React, Redux Toolkit, PWA, GH Actions
-- [Marathons TG bot](http://bit.ly/hammers-of-time)(bit.ly/hammers-of-time): Bot for collective learning marathons — [Github](https://github.com/m0rtyn/marathons-bot)
-  - **Stack**: Node.js, Telegraf.js, Next.js, Google Cloud Platform, Google APIs
+- [**Pokoy.app**](https://pokoy.app): A meditation timer app  — [Product Hunt](https://www.producthunt.com/products/pokoy)
+  <!-- - **Stack**: Firebase, Google Cloud Platform, React, Redux Toolkit, PWA, GH Actions -->
+- [**Marathons TG bot**](http://bit.ly/hammers-of-time)(bit.ly/hammers-of-time): Bot for collective learning marathons — [Github](https://github.com/m0rtyn/marathons-bot)
+  <!-- - **Stack**: Node.js, Telegraf.js, Next.js, Google Cloud Platform, Google APIs -->
+
+
+|                      |                                  |                      |  
+| -------------------- | -------------------------------- | -------------------- |  
+| **Telegram**: [t.me/m0rtyn][telega] <br><br> **Email**: [zogacc@gmail.com][email] |  [**GitHub**.com/m0rtyn][gh] <br><br> [**LeetCode**.com/u/m0rtyn][lc] |  [**LinkedIn**.com/in/m0rtyn][li]  |
+
+
+[telega]: https://t.me/m0rtyn
+[email]: mailto:zogacc@gmail.com
+[gh]: https://github.com/m0rtyn
+[lc]: https://leetcode.com/u/m0rtyn
+[li]: https://linkedin/in/m0rtyn
