@@ -98,7 +98,7 @@
 
 |                      |                                  |                      |  
 | -------------------- | -------------------------------- | -------------------- |  
-| **Telegram**: [t.me/m0rtyn][telega] <br><br> **Email**: [zogacc@gmail.com][email] |  [**GitHub**.com/m0rtyn][gh] <br><br> [**LeetCode**.com/u/m0rtyn][lc] |  [**LinkedIn**.com/in/m0rtyn][li]  <br><br> [This CV][cv] |
+| **Telegram**: [t.me/m0rtyn][telega] <br><br> **Email**: [zogacc@gmail.com][email] |  [**GitHub**.com/m0rtyn][gh] <br><br> [**LeetCode**.com/u/m0rtyn][lc] |  [**LinkedIn**.com/in/m0rtyn][li]  <br><br> [Link to this CV][cv] |
 
 
 [telega]: https://t.me/m0rtyn
