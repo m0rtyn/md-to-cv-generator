@@ -7,7 +7,7 @@ Generates clean CV from your markdown file
 ## Usage
 
 ```sh
-> md-to-cv ./EXAMPLE.md
+> md-to-cv-generator ./EXAMPLE.md
 ```
 
 ## TODOs

@@ -1,17 +1,11 @@
 {
   "name": "md-to-cv-generator",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "author": "Martyn <zogacc@gmail.com>",
   "license": "MIT",
   "module": "index.js",
   "type": "module",
-  "bin": {
-    "md-to-cv": "index.js",
-    "mdToCv": "index.js",
-    "mdtocv": "index.js",
-    "md-to-cv-generator": "index.js",
-    "md-to-cv-gen": "index.js"
-  },
+  "bin": "index.js",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon --ext \"md, css, js\" index.js"
