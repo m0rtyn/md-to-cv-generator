@@ -1,13 +1,14 @@
 {
   "name": "md-to-cv-generator",
   "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/m0rtyn/cv.git",
   "author": "Martyn <zogacc@gmail.com>",
   "license": "MIT",
+  "module": "index.js",
+  "type": "module",
+  "bin": "index.js",
   "scripts": {
-    "start": "node src/main.js",
-    "dev": "nodemon --ext \"md, css, js\" src/main.js"
+    "start": "node index.js",
+    "dev": "nodemon --ext \"md, css, js\" index.js"
   },
   "devDependencies": {
     "@types/node": "^20.4.5",
@@ -25,10 +26,7 @@
     "mkdirp": "^1.0.3",
     "mustache": "^4.0.1",
     "nodemon": "^3.1.7",
-    "puppeteer-core": "^23.6.0",
-    "rimraf": "^3.0.2"
-  },
-  "dependencies": {
+    "rimraf": "^3.0.2",
     "puppeteer": "^23.6.0"
   }
 }

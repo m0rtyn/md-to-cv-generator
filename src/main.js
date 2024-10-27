@@ -1,51 +1,38 @@
-var path = require('path');
-var fs = require('fs');
-var url = require('url');
-var os = require('os');
-var INSTALL_CHECK = false;
+import cheerio from 'cheerio';
+import fs from 'fs';
+import grayMatter from "gray-matter";
+import hljs from 'highlight.js';
+import MarkdownIt from 'markdown-it';
+import markdownItCheckbox from 'markdown-it-checkbox';
+import markdownItContainer from 'markdown-it-container';
+import markdownItInclude from 'markdown-it-include';
+import markdownItNamedHeaders from 'markdown-it-named-headers';
+import markdownItPlantuml from 'markdown-it-plantuml';
+import mkdirp from 'mkdirp';
+import mustache from 'mustache';
+import os from 'os';
+import path from 'path';
+import puppeteer from 'puppeteer';
+import rimraf from 'rimraf';
+import url, { fileURLToPath } from 'url';
+import { config } from './config.js';
 
-const config = {
-  'fileToConvert': 'FE_EN.md',
-  'plantumlOpenMarker': '@startuml',
-  'plantumlCloseMarker': '@enduml',
-  'markdown-it-include': {
-    'enable': true
-  },
-  'emoji': true,
-  'orientation': 'portrait',
-  'StatusbarMessageTimeout': 10000,
-  'breaks': false,
-  'scale': 1,
-  'omitBackground': false,
-  'printBackground': true,
-  'displayHeaderFooter': true,
-  'pageRanges': '',
-  'highlight': true,
-  'highlightStyle': '',
-  'styles': ['./cv.css'],
-  'stylesRelativePathFile': true,
-  'includeDefaultStyles': true,
-  'outputDirectory': './',
-  'outputDirectoryRelativePathFile': true,
-  'executablePath': '',
-  'debug': false,
-  'margin': {
-    'top': '1.5cm',
-    'right': '1cm',
-    'bottom': '1cm',
-    'left': '1cm'
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+export async function mdToCvGenerator(convertationType = 'pdf', fileToConvert) {
+  if (!fileToConvert) {
+    console.error('File name does not get!');
+    return;
   }
-}
-
-async function markdownPdf(option_type) {
 
   try {
 
     // check markdown mode
     var uri = {
-      fsPath: `${__dirname}/${config.fileToConvert}` // TODO: args[0]
+      fsPath: `${__dirname}/${fileToConvert}` // TODO: args[0]
     };
     var mdfilename = uri.fsPath;
+    console.debug("🚀 ~ markdownPdf ~ mdfilename:", mdfilename)
     var ext = path.extname(mdfilename);
 
     if (!isExistsPath(mdfilename)) {
@@ -56,16 +43,16 @@ async function markdownPdf(option_type) {
     var types_format = ['html', 'pdf', 'png', 'jpeg'];
     var filename = '';
     var types = [];
-    if (types_format.indexOf(option_type) >= 0) {
-      types[0] = option_type;
-    } else if (option_type === 'settings') {
+    if (types_format.indexOf(convertationType) >= 0) {
+      types[0] = convertationType;
+    } else if (convertationType === 'settings') {
       var types_tmp = 'pdf';
       if (types_tmp && !Array.isArray(types_tmp)) {
         types[0] = types_tmp;
       } else {
         types = ['pdf'];
       }
-    } else if (option_type === 'all') {
+    } else if (convertationType === 'all') {
       types = types_format;
     } else {
       console.error('markdownPdf().1 Supported formats: html, pdf, png, jpeg.');
@@ -111,10 +98,7 @@ async function markdownPdf(option_type) {
  */
 function convertMarkdownToHtml(filename, type, text) {
   // console.debug("🚀 ~ convertMarkdownToHtml ~ filename:", filename, text)
-  var grayMatter = require("gray-matter");
   var matterParts = grayMatter(text);
-  var hljs = require('highlight.js');
-  let MarkdownIt = require('markdown-it');
 
   var statusbarmessage = console.info('$(markdown) Converting (convertMarkdownToHtml) ...');
   var breaks = setBooleanValue(matterParts.data.breaks, config['breaks']);
@@ -146,7 +130,6 @@ function convertMarkdownToHtml(filename, type, text) {
 
   try {
     // convert the img src of the markdown
-    var cheerio = require('cheerio');
     var defaultRender = md.renderer.rules.image;
 
     if (!defaultRender) throw Error('defaultRender is not defined');
@@ -186,7 +169,7 @@ function convertMarkdownToHtml(filename, type, text) {
     }
 
     // checkbox
-    md.use(require('markdown-it-checkbox'));
+    md.use(markdownItCheckbox);
 
     let options = {
       slugify: slugify
@@ -216,11 +199,11 @@ function convertMarkdownToHtml(filename, type, text) {
 
     // toc
     // https://github.com/leff/markdown-it-named-headers
-    md.use(require('markdown-it-named-headers'), options);
+    md.use(markdownItNamedHeaders, options);
 
     // markdown-it-container
     // https://github.com/markdown-it/markdown-it-container
-    md.use(require('markdown-it-container'), '', {
+    md.use(markdownItContainer, '', {
       validate: function (name) {
         return name.trim().length;
       },
@@ -240,14 +223,14 @@ function convertMarkdownToHtml(filename, type, text) {
       closeMarker: matterParts.data.plantumlCloseMarker || config['plantumlCloseMarker'] || '@enduml',
       server: config['plantumlServer'] || ''
     }
-    md.use(require('markdown-it-plantuml'), plantumlOptions);
+    md.use(markdownItPlantuml, plantumlOptions);
 
     // markdown-it-include
     // https://github.com/camelaissani/markdown-it-include
     // the syntax is :[alt-text](relative-path-to-file.md)
     // https://talk.commonmark.org/t/transclusion-or-including-sub-documents-for-reuse/270/13
     if (config['markdown-it-include']['enable']) {
-      md.use(require("markdown-it-include"), {
+      md.use(markdownItInclude, {
         root: path.dirname(filename),
         includeRe: /:\[.+\]\((.+\..+)\)/i
       });
@@ -300,7 +283,6 @@ function makeHtml(data, uri) {
     // var mermaid = '<script src=\"' + mermaidServer + '\"></script>';
 
     // compile template
-    var mustache = require('mustache');
 
     var view = {
       title: title,
@@ -330,12 +312,6 @@ function exportHtml(data, filePath) {
  * export a html to a pdf file (html-pdf)
  */
 function exportPdf(data, filename, type, resourceUri) {
-  console.debug("🚀 ~ exportPdf ~ resourceUri:", resourceUri)
-  if (!INSTALL_CHECK) {
-    console.error('Chromium is not installed!')
-    return;
-  }
-
   if (!checkPuppeteerBinary()) {
     console.error('Chromium or Chrome does not exist! \
       See https://github.com/yzane/vscode-markdown-pdf#install');
@@ -355,7 +331,6 @@ function exportPdf(data, filename, type, resourceUri) {
         return;
       }
 
-      const puppeteer = require('puppeteer');
       // create temporary file
       var f = path.parse(filename);
       var tmpfilename = path.join(f.dir, `../${config.outputDirectory}`, `${f.name}_tmp.html`);
@@ -484,7 +459,6 @@ function isExistsDir(dirname) {
 }
 
 function deleteFile(path) {
-  var rimraf = require('rimraf')
   rimraf.sync(path);
 }
 
@@ -545,7 +519,6 @@ function mkdir(path) {
   if (isExistsDir(path)) {
     return;
   }
-  var mkdirp = require('mkdirp');
   return mkdirp.sync(path);
 }
 
@@ -677,13 +650,8 @@ function checkPuppeteerBinary() {
   try {
     // settings.json
     var executablePath = config['executablePath'] || ''
-    if (isExistsPath(executablePath)) {
-      INSTALL_CHECK = true;
-      return true;
-    }
 
     // bundled Chromium
-    const puppeteer = require('puppeteer');
     executablePath = puppeteer.executablePath();
 
     if (isExistsPath(executablePath)) {
@@ -703,15 +671,3 @@ function setBooleanValue(a, b) {
     return a || b
   }
 }
-
-function init() {
-  try {
-    console.info('[Markdown PDF] Chromium is already installed.');
-    INSTALL_CHECK = true;
-  } catch (error) {
-    console.error('init()', error);
-  }
-}
-
-init()
-markdownPdf('pdf').then(console.log).catch(console.error)
