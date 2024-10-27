@@ -18,6 +18,7 @@ import url, { fileURLToPath } from 'url';
 import { config } from './config.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const executionPath = process.cwd();
 
 export async function mdToCvGenerator(convertationType = 'pdf', fileToConvert) {
   if (!fileToConvert) {
@@ -29,10 +30,9 @@ export async function mdToCvGenerator(convertationType = 'pdf', fileToConvert) {
 
     // check markdown mode
     var uri = {
-      fsPath: `${__dirname}/${fileToConvert}` // TODO: args[0]
+      fsPath: `${executionPath}/${fileToConvert}`
     };
     var mdfilename = uri.fsPath;
-    console.debug("🚀 ~ markdownPdf ~ mdfilename:", mdfilename)
     var ext = path.extname(mdfilename);
 
     if (!isExistsPath(mdfilename)) {
@@ -71,6 +71,7 @@ export async function mdToCvGenerator(convertationType = 'pdf', fileToConvert) {
           var content = convertMarkdownToHtml(mdfilename, type, text);
 
           var html = makeHtml(content, uri);
+          console.debug("🚀 ~ mdToCvGenerator ~ html:", html)
 
           await exportPdf(html, filename, type, uri);
         } else {
@@ -275,8 +276,9 @@ function makeHtml(data, uri) {
     var title = path.basename(uri.fsPath);
 
     // read template
-    var filename = path.join(__dirname, 'templates', 'template.html');
-    var template = readFile(filename).toString();
+    var filename = './template.html';
+    var templateHtml = readFile(filename).toString();
+    console.debug("🚀 ~ makeHtml ~ template:", filename, templateHtml)
 
     // read mermaid javascripts
     // var mermaidServer = '';
@@ -290,7 +292,7 @@ function makeHtml(data, uri) {
       content: data,
       // mermaid: mermaid
     };
-    return mustache.render(template, view);
+    return mustache.render(templateHtml, view);
   } catch (error) {
     console.error('makeHtml()', error);
   }
@@ -300,6 +302,7 @@ function makeHtml(data, uri) {
  * export a html to a html file
  */
 function exportHtml(data, filePath) {
+  console.debug("🚀 ~ exportHtml ~ data, filePath:", data, filePath)
   fs.writeFile(filePath, data, 'utf-8', function (error) {
     if (error) {
       console.error('exportHtml()', error);
@@ -333,7 +336,7 @@ function exportPdf(data, filename, type, resourceUri) {
 
       // create temporary file
       var f = path.parse(filename);
-      var tmpfilename = path.join(f.dir, `../${config.outputDirectory}`, `${f.name}_tmp.html`);
+      var tmpfilename = path.join(executionPath, `${f.name}_tmp.html`);
 
       exportHtml(data, tmpfilename);
 
@@ -462,24 +465,23 @@ function deleteFile(path) {
   rimraf.sync(path);
 }
 
-function getOutputDir(filename, resourceUri) {
-  console.debug("🚀 ~ getOutputDir ~ filename, resourceUri:", filename, resourceUri)
+function getOutputDir(filePath, resourceUri) {
   try {
     var outputDir;
     if (resourceUri === undefined) {
-      return filename;
+      return filePath;
     }
     
     var outputDirectory = config['outputDirectory'] || '';
     if (outputDirectory.length === 0) {
-      return filename
+      return filePath
     }
 
     // Use a home directory relative path If it starts with ~.
     if (outputDirectory.indexOf('~') === 0) {
       outputDir = outputDirectory.replace(/^~/, os.homedir());
       mkdir(outputDir);
-      return path.join(outputDir, path.basename(filename));
+      return path.join(outputDir, path.basename(filePath));
     }
 
     // Use path if it is absolute
@@ -489,7 +491,7 @@ function getOutputDir(filename, resourceUri) {
           Check the markdown-pdf.outputDirectory option. ` + outputDirectory);
         return;
       }
-      return path.join(outputDirectory, path.basename(filename));
+      return path.join(outputDirectory, path.basename(filePath));
     }
 
     // Use a workspace relative path if there is a workspace and markdown-pdf.outputDirectoryRootPath = workspace
@@ -501,15 +503,13 @@ function getOutputDir(filename, resourceUri) {
       },
     }
     if (outputDirectoryRelativePathFile === false) {
-      outputDir = path.join(root.uri.fsPath, outputDirectory);
       mkdir(outputDir);
-      return path.join(outputDir, path.basename(filename));
+      return path.join(executionPath, path.basename(filePath));
     }
 
     // Otherwise look relative to the markdown file
-    outputDir = path.join(path.dirname(resourceUri.fsPath), `../${outputDirectory}`);
-    mkdir(outputDir);
-    return path.join(outputDir, path.basename(filename));
+    // mkdir(outputDir);
+    return path.join(executionPath, path.basename(filePath));
   } catch (error) {
     console.error('getOutputDir()', error);
   }
@@ -522,13 +522,9 @@ function mkdir(path) {
   return mkdirp.sync(path);
 }
 
-function readFile(filename, encode) {
-  if (filename.length === 0) {
-    return '';
-  }
-  if (!encode && encode !== null) {
-    encode = 'utf-8';
-  }
+function readFile(filename, encoding='utf-8') {
+  if (filename.length === 0) return '';
+
   if (filename.indexOf('file://') === 0) {
     if (process.platform === 'win32') {
       filename = filename.replace(/^file:\/\/\//, '')
@@ -537,8 +533,11 @@ function readFile(filename, encode) {
       filename = filename.replace(/^file:\/\//, '');
     }
   }
-  if (isExistsPath(filename)) {
-    return fs.readFileSync(filename, encode);
+
+  const filePath = path.join(__dirname, filename)
+
+  if (isExistsPath(filePath)) {
+    return fs.readFileSync(filePath, { encoding });
   } else {
     return '';
   }
