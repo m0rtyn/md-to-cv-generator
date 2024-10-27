@@ -2,4 +2,17 @@
 
 Generates clean CV from your markdown file
 
-![example](image.png)
+![example](image-1.png)
+
+## Usage
+
+```sh
+> md-to-cv ./EXAMPLE.md
+```
+
+## TODOs
+
+- [ ] add converting to HTML
+- [ ] add converting to jpeg
+- [ ] add custom styles
+- [ ] add themes
