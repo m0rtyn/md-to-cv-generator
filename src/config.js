@@ -16,7 +16,7 @@ export const config = {
     'pageRanges': '',
     'highlight': true,
     'highlightStyle': '',
-    'styles': ['styles/cv.css'],
+    'styles': [],
     'stylesRelativePathFile': true,
     'includeDefaultStyles': true,
     'outputDirectory': './',

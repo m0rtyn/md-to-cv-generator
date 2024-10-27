@@ -71,7 +71,6 @@ export async function mdToCvGenerator(convertationType = 'pdf', fileToConvert) {
           var content = convertMarkdownToHtml(mdfilename, type, text);
 
           var html = makeHtml(content, uri);
-          console.debug("🚀 ~ mdToCvGenerator ~ html:", html)
 
           await exportPdf(html, filename, type, uri);
         } else {
@@ -98,7 +97,6 @@ export async function mdToCvGenerator(convertationType = 'pdf', fileToConvert) {
  * convert markdown to html (markdown-it)
  */
 function convertMarkdownToHtml(filename, type, text) {
-  // console.debug("🚀 ~ convertMarkdownToHtml ~ filename:", filename, text)
   var matterParts = grayMatter(text);
 
   var statusbarmessage = console.info('$(markdown) Converting (convertMarkdownToHtml) ...');
@@ -301,7 +299,6 @@ function makeHtml(data, uri) {
  * export a html to a html file
  */
 function exportHtml(data, filePath) {
-  console.debug("🚀 ~ exportHtml ~ data, filePath:", data, filePath)
   fs.writeFile(filePath, data, 'utf-8', function (error) {
     if (error) {
       console.error('exportHtml()', error);
@@ -438,7 +435,7 @@ function isExistsPath(path) {
     fs.accessSync(path);
     return true;
   } catch (error) {
-    console.warn(error.message);
+    console.error(error.message);
     return false;
   }
 }
@@ -455,7 +452,7 @@ function isExistsDir(dirname) {
       return false;
     }
   } catch (error) {
-    console.warn(error.message);
+    console.error(error.message);
     return false;
   }
 }
@@ -595,25 +592,22 @@ function readStyles(uri) {
     var includeDefaultStyles;
     var style = '';
     var styles = [];
-    var filename = '';
+    var filePath = '';
     var i;
 
     includeDefaultStyles = config['includeDefaultStyles'];
 
     // 1. read the style of the vscode.
     if (includeDefaultStyles) {
-      filename = path.join(__dirname, 'styles', 'markdown.css');
-      style += makeCss(filename);
-    }
+      filePath = path.join('styles', 'markdown.css');
+      style += makeCss(filePath);
 
-    // 2. read the style of the markdown.styles setting.
-    if (includeDefaultStyles) {
-      styles = config['styles'];
-      if (styles?.length > 0) {
-        for (i = 0; i < styles.length; i++) {
-          style += `<link rel="stylesheet" href="${path.join(__dirname, styles[i])}" type="text/css">`;
-        }
-      }
+      // read the style of the markdown-pdf.
+      filePath = path.join('styles', 'markdown-pdf.css');
+      style += makeCss(filePath);
+
+      filePath = path.join('styles', 'cv.css');
+      style += makeCss(filePath);
     }
 
     // 3. read the style of the highlight.js.
@@ -622,21 +616,15 @@ function readStyles(uri) {
     if (ishighlight) {
       if (highlightStyle) {
         var css = config['highlightStyle'] || 'github.css';
-        filename = path.join(__dirname, 'node_modules', 'highlight.js', 'styles', css);
-        style += makeCss(filename);
+        filePath = path.join('node_modules', 'highlight.js', 'styles', css);
+        style += makeCss(filePath);
       } else {
-        filename = path.join(__dirname, 'styles', 'tomorrow.css');
-        style += makeCss(filename);
+        filePath = path.join('styles', 'tomorrow.css');
+        style += makeCss(filePath);
       }
     }
 
-    // 4. read the style of the markdown-pdf.
-    if (includeDefaultStyles) {
-      filename = path.join(__dirname, 'styles', 'markdown-pdf.css');
-      style += makeCss(filename);
-    }
-
-    // 5. read the style of the markdown-pdf.styles settings.
+    // 5. read the style of the custom styles settings.
     styles = config['styles'];
     if (styles?.length > 0) {
       for (i = 0; i < styles.length; i++) {
