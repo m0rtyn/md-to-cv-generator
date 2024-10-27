@@ -278,7 +278,6 @@ function makeHtml(data, uri) {
     // read template
     var filename = './template.html';
     var templateHtml = readFile(filename).toString();
-    console.debug("🚀 ~ makeHtml ~ template:", filename, templateHtml)
 
     // read mermaid javascripts
     // var mermaidServer = '';
@@ -522,6 +521,12 @@ function mkdir(path) {
   return mkdirp.sync(path);
 }
 
+/**
+ * 
+ * @param {*} filename 
+ * @param {'utf-8'} encoding 
+ * @returns 
+ */
 function readFile(filename, encoding='utf-8') {
   if (filename.length === 0) return '';
 
@@ -606,7 +611,7 @@ function readStyles(uri) {
       styles = config['styles'];
       if (styles?.length > 0) {
         for (i = 0; i < styles.length; i++) {
-          style += `<link rel="stylesheet" href="src/${styles[i]}" type="text/css">`;
+          style += `<link rel="stylesheet" href="${path.join(__dirname, styles[i])}" type="text/css">`;
         }
       }
     }
@@ -635,7 +640,7 @@ function readStyles(uri) {
     styles = config['styles'];
     if (styles?.length > 0) {
       for (i = 0; i < styles.length; i++) {
-        style += `<link rel="stylesheet" href="src/${styles[i]}" type="text/css">`;
+        style += `<link rel="stylesheet" href="${path.join(__dirname, styles[i])}" type="text/css">`;
       }
     }
 
