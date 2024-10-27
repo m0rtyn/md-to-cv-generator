@@ -1,1 +1,0 @@
-# Владимир Мартыненко | Frontend Developer
