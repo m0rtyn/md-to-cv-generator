@@ -5,8 +5,9 @@ html {
 h1, h2, h3 {
   font-family: 'iA Writer Duo S', sans-serif;
   font-weight: bold;
-  margin: 1em 0;
-  padding-bottom: 0.3em;
+  margin-top: 1.2em;
+  margin-bottom: 0.8em;
+  /* padding-bottom: 0.3em; */
 }
 
 body {
@@ -24,7 +25,19 @@ h1 {
 
 h2 {
   font-size: 22px;
-  border-bottom: 2px solid var(--color-gray);
+  position: relative;
+
+  &:after {
+    /* border-bottom: 2px solid var(--color-gray); */
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-gray);
+  }
 }
 
 h3 {
