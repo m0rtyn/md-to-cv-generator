@@ -1,4 +1,3 @@
-# cv
+# Markdown to CV Generator
 
-- [Frontend Dev](./FE.pdf)
-- [Frontend Dev](./TL.pdf)
+Generates clean CV from your markdown file
