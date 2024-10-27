@@ -20,14 +20,13 @@ import { config } from './config.js';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const executionPath = process.cwd();
 
-export async function mdToCvGenerator(convertationType = 'pdf', fileToConvert) {
+export async function mdToCvGenerator(convertationType = 'pdf', fileToConvert = '') {
   if (!fileToConvert) {
     console.error('File name does not get!');
     return;
   }
 
   try {
-
     // check markdown mode
     var uri = {
       fsPath: `${executionPath}/${fileToConvert}`

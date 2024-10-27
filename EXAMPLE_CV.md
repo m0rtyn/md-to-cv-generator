@@ -5,23 +5,14 @@
 | **Experience**:  X years | **Language**: ENG (C99) / DE (A1) | **Location**: Night City |
 | **Telegram**: [t.me/username][telega] | **Email**: [your@email.com][email] | [**LinkedIn**.com/in/username][li] |
 
-> 👋 Hey there! I’m a seasoned developer specializing in `Protoact` and `YoptaScript` with automation experience in `Python.js`. I excel in agile methodologies and fostering team collaboration.
+> 👋 Hey there! I’m a seasoned developer specializing in `BrainFuck` with experience in `Python.js`.
 
 ## Technical Skills
 
--	**Languages**: JavaScript, Python, Excel formulas
+-	**Languages**: Excel formulas
 -	**Frameworks**: React, Preact, Postact
--	**Tools**: Nope.js, GiraphQL, Windows
 
 ## Experience
-
-- ### Leader @ Mar.io *Jan'23 — Sep'24*
-
-  *Remote, full-time | Startup, Web3, GamyFi, SocialFi*
-
-  **Stack**: React, TypeScript, Apollo Client (GraphQL), RadixUI, Trading View Charts, ThirdWeb/Wagmi, FSD
-
-  - Implemented a killer feature: App.tsx component with 10000 lines of code
 
 - ### Senior @ Freelantis.ai *Apr'22 — Dec'22*
 
@@ -29,6 +20,7 @@
 
   **Stack**: Nuxt.js, Next.js, Nixt.js
 
+  - Implemented a killer feature: App.tsx component with 10000 lines of code
   - Implemented strong typing through JSDoc, resulting in a reduction of bugs by at least 1500%
   - Had a fun
 
@@ -39,29 +31,13 @@
   **Stack**: Angular (1), Nx, gRPC, Material UI
 
   - Developed a frontend for the internal service from scratch
-
-- ### Intern @ Sinrush *Aug'19 — Jul'20*
-
-  *Office, full-time | SaaS, Internal services*
-
-  **Stack**: React, Redux, Typescript
-
-  **Project**: internal service to getting things done
-
   - Contributed to a famous OSS library [noname/react-do-something](https://noname.github.io/do-something/)
 
 ## Rest activities
 
-> I enjoy giving talks (>99), have spoken at: [CSSinJS&nbsp;Meetup](https://google.com), [PyratePy&nbsp;Meetup](https://google.com), [Suicide&nbsp;Lead](https://google.com), [SuperDuperConf](https://google.com/). You can watch some of them [here](https://youtube.com/).
+> I enjoy giving talks (>99), have spoken at: [CSSinJSConf](https://google.com), [SuperDuperConf](https://google.com/).
 > 
 > I contribute to open-source projects like Windows, MacOS, Oracle
-
-### Pet Projects
-
-- [**NNN.app**](https://pokoy.app): A sleep timer app  — [Product Hunt](https://www.producthunt.com/products/nnnapp)
-  <!-- - **Stack**: Firebase, Google Cloud Platform, React, Redux Toolkit, PWA, GH Actions -->
-- [**Useless TG bot**](http://bit.ly/uselessbot)(bit.ly/uselessbot): Bot for collecting chat data — [Github](https://github.com/username/uselessbot)
-  <!-- - **Stack**: Node.js, Telegraf.js, Next.js, Google Cloud Platform, Google APIs -->
 
 <!-- CONTACTS -->
 |                      |                                  |                      |  
