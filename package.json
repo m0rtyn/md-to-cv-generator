@@ -12,6 +12,8 @@
   },
   "devDependencies": {
     "@types/node": "^20.4.5",
+  },
+  "dependencies": {
     "cheerio": "^0.20.0",
     "emoji-images": "^0.1.1",
     "gray-matter": "^4.0.2",
@@ -27,9 +29,7 @@
     "mustache": "^4.0.1",
     "nodemon": "^3.1.7",
     "puppeteer": "^23.6.0",
-    "rimraf": "^3.0.2"
-  },
-  "dependencies": {
+    "rimraf": "^3.0.2",
     "yargs": "^17.7.2"
   }
 }
