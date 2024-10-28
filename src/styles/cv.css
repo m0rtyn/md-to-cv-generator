@@ -1,15 +1,17 @@
 html {
   --color-gray: rgba(0,0,0,0.05);
+  --font-family-system: 'Segoe UI', Roboto, Oxygen, BlinkMacSystemFont, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-family-titles: 'iA Writer Duo S', sans-serif;
 } 
 
 body {
-  font-family: 'Segoe UI', Roboto, Oxygen, BlinkMacSystemFont, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--font-family-system);
   /* font-family: 'iA Writer Duo S', sans-serif; */
   /* font-family: Roboto, sans-serif; */
 }
 
 h1, h2, h3 {
-  font-family: 'iA Writer Duo S', sans-serif;
+  font-family: var(--font-family-titles);
   font-weight: bold;
   margin-top: 1.2em;
   margin-bottom: 0.8em;
@@ -48,6 +50,7 @@ h3 {
 }
 
 h3 > em {
+  font-family: var(--font-family-system);
   font-size: 0.9em;
   font-weight: 400;
   color: #0007;

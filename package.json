@@ -1,6 +1,6 @@
 {
   "name": "md-to-cv-generator",
-  "version": "1.0.8",
+  "version": "1.1.1",
   "author": "Martyn <zogacc@gmail.com>",
   "license": "MIT",
   "module": "index.js",
