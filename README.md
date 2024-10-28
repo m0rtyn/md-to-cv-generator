@@ -12,7 +12,8 @@ Generates clean CV from your markdown file
 
 ## TODOs
 
+- [x] add watch mode
+- [x] add custom styles
 - [ ] add converting to HTML
 - [ ] add converting to jpeg
-- [ ] add custom styles
 - [ ] add themes

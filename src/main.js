@@ -20,7 +20,14 @@ import { config } from './config.js';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const executionPath = process.cwd();
 
-export async function mdToCvGenerator(convertationType = 'pdf', fileToConvert = '') {
+/**
+ * 
+ * @param {'pdf' | 'html' | 'jpeg' | 'all'} convertationType 
+ * @param {string|null} fileToConvert 
+ * @param {string|null} customStylesPath 
+ * @returns 
+ */
+export async function mdToCvGenerator(convertationType = 'pdf', fileToConvert = null, customStylesPath = null) {
   if (!fileToConvert) {
     console.error('File name does not get!');
     return;
@@ -44,13 +51,6 @@ export async function mdToCvGenerator(convertationType = 'pdf', fileToConvert = 
     var types = [];
     if (types_format.indexOf(convertationType) >= 0) {
       types[0] = convertationType;
-    } else if (convertationType === 'settings') {
-      var types_tmp = 'pdf';
-      if (types_tmp && !Array.isArray(types_tmp)) {
-        types[0] = types_tmp;
-      } else {
-        types = ['pdf'];
-      }
     } else if (convertationType === 'all') {
       types = types_format;
     } else {
@@ -69,7 +69,7 @@ export async function mdToCvGenerator(convertationType = 'pdf', fileToConvert = 
           const text = fs.readFileSync(mdfilename, 'utf-8');
           var content = convertMarkdownToHtml(mdfilename, type, text);
 
-          var html = makeHtml(content, uri);
+          var html = makeHtml(content, uri, customStylesPath);
 
           await exportPdf(html, filename, type, uri);
         } else {
@@ -263,11 +263,11 @@ function slugify(string) {
 /*
  * make html
  */
-function makeHtml(data, uri) {
+function makeHtml(data, uri, customStylesPath) {
   try {
     // read styles
     var style = '';
-    style += readStyles(uri);
+    style += readStyles(uri, customStylesPath);
 
     // get title
     var title = path.basename(uri.fsPath);
@@ -524,6 +524,7 @@ function mkdir(path) {
  * @returns 
  */
 function readFile(filename, encoding='utf-8') {
+  console.debug("🚀 ~ readFile ~ filename:", filename)
   if (filename.length === 0) return '';
 
   if (filename.indexOf('file://') === 0) {
@@ -535,7 +536,9 @@ function readFile(filename, encoding='utf-8') {
     }
   }
 
-  const filePath = path.join(__dirname, filename)
+  const filePath = filename.startsWith('/') 
+    ? filename
+    : path.join(__dirname, filename);
 
   if (isExistsPath(filePath)) {
     return fs.readFileSync(filePath, { encoding });
@@ -573,9 +576,9 @@ function convertImgPath(src, filename) {
   }
 }
 
-function makeCss(filename) {
+function makeCss(filePath) {
   try {
-    var css = readFile(filename);
+    var css = readFile(filePath);
     if (css) {
       return '\n<style>\n' + css + '\n</style>\n';
     } else {
@@ -586,13 +589,13 @@ function makeCss(filename) {
   }
 }
 
-function readStyles(uri) {
+function readStyles(uri, customStylesPath) {
   try {
     var includeDefaultStyles;
     var style = '';
-    var styles = [];
+    // var styles = [];
     var filePath = '';
-    var i;
+    // var i;
 
     includeDefaultStyles = config['includeDefaultStyles'];
 
@@ -623,12 +626,10 @@ function readStyles(uri) {
       }
     }
 
-    // 5. read the style of the custom styles settings.
-    styles = config['styles'];
-    if (styles?.length > 0) {
-      for (i = 0; i < styles.length; i++) {
-        style += `<link rel="stylesheet" href="${path.join(__dirname, styles[i])}" type="text/css">`;
-      }
+    if (customStylesPath) {
+      filePath = path.join(executionPath, customStylesPath);
+      console.debug("🚀 ~ readStyles ~ customStylesPath:", customStylesPath, filePath)
+      style += makeCss(filePath);
     }
 
     return style;

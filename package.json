@@ -26,7 +26,10 @@
     "mkdirp": "^1.0.3",
     "mustache": "^4.0.1",
     "nodemon": "^3.1.7",
-    "rimraf": "^3.0.2",
-    "puppeteer": "^23.6.0"
+    "puppeteer": "^23.6.0",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "yargs": "^17.7.2"
   }
 }

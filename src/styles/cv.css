@@ -2,18 +2,18 @@ html {
   --color-gray: rgba(0,0,0,0.05);
 } 
 
+body {
+  font-family: 'Segoe UI', Roboto, Oxygen, BlinkMacSystemFont, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* font-family: 'iA Writer Duo S', sans-serif; */
+  /* font-family: Roboto, sans-serif; */
+}
+
 h1, h2, h3 {
   font-family: 'iA Writer Duo S', sans-serif;
   font-weight: bold;
   margin-top: 1.2em;
   margin-bottom: 0.8em;
   /* padding-bottom: 0.3em; */
-}
-
-body {
-  font-family: 'Segoe UI', Roboto, Oxygen, BlinkMacSystemFont, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  /* font-family: 'iA Writer Duo S', sans-serif; */
-  /* font-family: Roboto, sans-serif; */
 }
 
 h1 {
