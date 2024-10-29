@@ -2,13 +2,17 @@
 
 Generates clean CV from your markdown file
 
-![example](image-1.png)
-
 ## Usage
 
 ```sh
-> md-to-cv-generator ./EXAMPLE.md
+> npm install md-to-cv-generator
+//...
+> md-to-cv-generator -f=./EXAMPLE.md
 ```
+
+## Example
+<img alt="example" src="image-1.png" width="300" />
+
 
 ## TODOs
 
