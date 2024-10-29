@@ -6,7 +6,7 @@ Generates clean CV from your markdown file
 
 ```sh
 > npm install md-to-cv-generator
-//...
+...
 > md-to-cv-generator -f=./EXAMPLE.md
 ```
 
@@ -16,8 +16,11 @@ Generates clean CV from your markdown file
 
 ## TODOs
 
-- [x] add watch mode
-- [x] add custom styles
-- [ ] add converting to HTML
-- [ ] add converting to jpeg
-- [ ] add themes
+- [x] watch mode
+- [x] custom styles
+- [x] styling
+- [x] building from templates
+- [ ] option to specify dist folder
+- [ ] converting to HTML
+- [ ] converting to jpeg
+- [ ] themes
