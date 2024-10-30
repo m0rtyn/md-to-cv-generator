@@ -6,12 +6,12 @@ import fs from 'fs';
 const argv = await yargs(process.argv.slice(2))
   .option('file', {
     alias: 'f',
-    description: 'Realative path to the markdown file',
+    description: 'Relative path to the markdown file',
     type: 'string',
   })
   .option('styles', {
     alias: 's',
-    description: 'Realative path to the custom styles file',
+    description: 'Relative path to the css file',
     type: 'string',
   })
   .option('watch', {
@@ -23,13 +23,16 @@ const argv = await yargs(process.argv.slice(2))
     alias: 'd',
     description: 'Directory to watch',
     type: 'string',
-    default: '.',
   })
   .help()
   .argv
 
   
 if (argv.watch) {
+  if (!argv.dir || argv.dir === './') {
+    console.error('Please provide a directory to watch other than the current directory');
+    process.exit(1);
+  }
   const directoryToWatch = argv.dir;
   console.log(`Watching for changes in ${directoryToWatch}...`);
 
@@ -40,8 +43,8 @@ if (argv.watch) {
         .catch(console.error)
     }
   });
-} else {
-  mdToCvGenerator('pdf', argv.file, argv.styles)
-    .then(console.log)
-    .catch(console.error)
 }
+
+mdToCvGenerator('pdf', argv.file, argv.styles)
+  .then(console.log)
+  .catch(console.error)
